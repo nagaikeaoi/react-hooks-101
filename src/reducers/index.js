@@ -34,7 +34,11 @@ const events = (state = [], action) => {
       const event = { title: action.title, body: action.body };
       const lenght = state.length;
       const id = lenght === 0 ? 1 : state[lenght - 1].id + 1;
+<<<<<<< HEAD
       return [...state, { id, ...event }];
+=======
+      return state;
+>>>>>>> 51656bff8b1c90cc5fd09a8b0f3e4672a87115df
     case "DELETE_EVENT":
       return state;
     case "DELETE_ALL_EVENT":
