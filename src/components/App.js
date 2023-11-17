@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import EventForm from "./EventForm";
 import Events from "./Events";
 import AppContext from "../contexts/AppContext";
-import reducer from "../reducers/events";
+import reducer from "../reducers";
 
 const App = () => {
   const initialState = {
@@ -13,6 +13,7 @@ const App = () => {
     operationLogs: [],
   };
   const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className="container-fluid">
